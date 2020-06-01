@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Tcx.BookStore.Class;
 using Tcx.BookStore.Users;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
@@ -22,10 +23,6 @@ namespace Tcx.BookStore.EntityFrameworkCore
     {
         public DbSet<AppUser> Users { get; set; }
         public DbSet<Book> Books { get; set; }
-
-        /* Add DbSet properties for your Aggregate Roots / Entities here.
-         * Also map them inside BookStoreDbContextModelCreatingExtensions.ConfigureBookStore
-         */
 
         public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options)
             : base(options)

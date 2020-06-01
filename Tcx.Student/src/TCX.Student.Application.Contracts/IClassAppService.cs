@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Volo.Abp.Application.Dtos;
+using Volo.Abp.Application.Services;
+
+namespace TCX.Student
+{
+    public interface IClassAppService :
+        ICrudAppService<
+            ClassDto,
+            Guid,
+            PagedAndSortedResultRequestDto,
+            CreateUpdateClassDto,
+            CreateUpdateClassDto>
+    {
+
+    }
+}
